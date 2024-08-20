@@ -24,9 +24,7 @@ struct Character_Data
 int main()
 {
     Character_Data C1;
-    int C_Rarity = 0;
-    int C_Num = 0;
-    C1 = Character_Name(C_Rarity, C_Num);
+    C1 = Character_Lib();
     double Final_Value = (1 + C1.Percent_Value) * (C1.Weapon_Value + C1.Character_Value) + C1.Fixed_Value;
     cout << "您选择的角色名称为：" << C1.Character_Name << endl;
     cout << "该角色等级为：" << C1.Character_Level << endl;

@@ -20,8 +20,11 @@ struct Character_Data
     string Character_Name;//角色姓名
 
 };
-Character_Data  Character_Name(int C_Rarity, int C_Num)
+Character_Data  Character_Lib()
 {
+    int C_Rarity;
+    int C_Num;
+
     cout << "当前为角色稀有度选择界面，请输入角色的星级：" << endl;
     cin >> C_Rarity;
 
@@ -56,9 +59,12 @@ Character_Data  Character_Name(int C_Rarity, int C_Num)
         case 16:
             return { 412,587,0.243,1.005,440,0.748,2.594,0.75,0.487,3.4792,0,0,90,10 ,"今汐" };
             break;
+
+        default:cout << "请输入正确的数字！" << endl;
+            return { 0,0,0,0,0,0,0,0,0,0,0,0,0,0 ," 0" };
+            break;
         }
         break;
-    default:cout << "请输入正确的数字！" << endl;
-        return { 0,0,0,0,0,0,0,0,0,0,0,0,0,0 ," 0" };
+
     }
 }
